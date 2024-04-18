@@ -82,3 +82,4 @@ country_event = {
 		custom_effect_tooltip = GLO_very_hard_difficulty_tt
 		set_global_flag = very_hard_difficulty
 	}
+}

@@ -1,9 +1,9 @@
-version="1.3"
+version="1.4"
 tags={
 	"Balance"
 	"Utilities"
 	"Gameplay"
 }
 name="State integration"
-supported_version="1.12.*"
+supported_version="1.14.*"
 remote_file_id="2975212040"
