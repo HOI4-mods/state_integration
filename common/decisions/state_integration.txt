@@ -45,8 +45,7 @@ GLO_state_integration_category = {
         target_trigger = {
 			has_country_flag = show_peace_integration_decision
 			FROM = { 
-				NOT = { is_core_of = ROOT } 
-				NOT = { has_state_flag = being_cored } 
+				NOT = { is_core_of = ROOT }
 			}
         }
 
@@ -86,6 +85,11 @@ GLO_state_integration_category = {
         }
 
         visible = {
+			FROM = {
+				NOT = {
+					has_state_flag = being_cored
+				}
+			}
         }
 
         custom_cost_trigger = {
@@ -155,7 +159,6 @@ GLO_state_integration_category = {
 			has_country_flag = show_force_integration_decision
             FROM = {
 				NOT = { is_core_of = ROOT }
-				NOT = { has_state_flag = being_cored }
             }
 			NOT = {
 				OR = {
@@ -201,7 +204,11 @@ GLO_state_integration_category = {
         }
 
         visible = {
-            
+            FROM = {
+				NOT = {
+					has_state_flag = being_cored
+				}
+			}
         }
 
         custom_cost_trigger = {
