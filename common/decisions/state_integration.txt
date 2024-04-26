@@ -47,6 +47,7 @@ GLO_state_integration_category = {
 			FROM = { 
 				NOT = { is_core_of = ROOT }
 			}
+			is_ai = no
         }
 
         available = {
@@ -156,6 +157,7 @@ GLO_state_integration_category = {
 		}
 
         target_trigger = {
+			is_ai = no
 			has_country_flag = show_force_integration_decision
             FROM = {
 				NOT = { is_core_of = ROOT }
