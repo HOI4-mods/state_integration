@@ -37,6 +37,7 @@ country_event = {
 			set_variable = { global.GLO_f_inf_cost = 1000 }
             set_variable = { global.GLO_f_stability_cost = -0.02 }
 		}
+		
 		custom_effect_tooltip = GLO_easy_difficulty_tt
 		set_global_flag = easy_difficulty
 	}
@@ -44,17 +45,19 @@ country_event = {
 	option = { #medium difficulty 
 		name = difficultyevent.1.b
 
-		set_variable = { global.GLO_p_pp_cost = 50 }
-		set_variable = { global.GLO_p_comp_cost = 80 }
-		set_variable = { global.GLO_p_res_cost = 20 }
-		set_variable = { global.GLO_p_mp_cost = 500 }
-		set_variable = { global.GLO_p_inf_cost = 250 }
-		
-		set_variable = { global.GLO_f_comp_cost = 35 }
-		set_variable = { global.GLO_f_res_cost = 35 }
-		set_variable = { global.GLO_f_mp_cost = 8500 }
-		set_variable = { global.GLO_f_inf_cost = 1600 }
-		set_variable = { global.GLO_f_stability_cost = -0.02 }
+		ROOT = {
+			set_variable = { global.GLO_p_pp_cost = 50 }
+			set_variable = { global.GLO_p_comp_cost = 80 }
+			set_variable = { global.GLO_p_res_cost = 20 }
+			set_variable = { global.GLO_p_mp_cost = 500 }
+			set_variable = { global.GLO_p_inf_cost = 250 }
+			
+			set_variable = { global.GLO_f_comp_cost = 35 }
+			set_variable = { global.GLO_f_res_cost = 35 }
+			set_variable = { global.GLO_f_mp_cost = 8500 }
+			set_variable = { global.GLO_f_inf_cost = 1600 }
+			set_variable = { global.GLO_f_stability_cost = -0.02 }
+		}
 
 		custom_effect_tooltip = GLO_medium_difficulty_tt
 		set_global_flag = medium_difficulty
