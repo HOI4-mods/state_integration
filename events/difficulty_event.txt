@@ -15,6 +15,7 @@ country_event = {
 			set_variable = { global.GLO_p_res_cost = 20 }
 			set_variable = { global.GLO_p_mp_cost = 500 }
 			set_variable = { global.GLO_p_inf_cost = 250 }
+
 			set_variable = { global.GLO_f_comp_cost = 35 }
 			set_variable = { global.GLO_f_res_cost = 35 }
 			set_variable = { global.GLO_f_mp_cost = 8500 }
@@ -97,6 +98,7 @@ country_event = {
 			set_variable = { global.GLO_f_inf_cost = 4000 }
             set_variable = { global.GLO_f_stability_cost = -0.07 }
 		}
+		
 		custom_effect_tooltip = GLO_very_hard_difficulty_tt
 		set_global_flag = very_hard_difficulty
 	}
