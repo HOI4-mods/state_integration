@@ -102,12 +102,20 @@ GLO_state_integration_category = {
         days_remove = 50
 
         complete_effect = {
-            add_manpower = global.GLO_p_mp_cost
-			add_political_power = global.GLO_p_pp_cost
+			set_temp_variable = { GLO_p_pp_cost_t = global.GLO_p_pp_cost }
+			set_temp_variable = { GLO_p_mp_cost_t = global.GLO_p_mp_cost }
+			set_temp_variable = { GLO_p_inf_cost_t = global.GLO_p_inf_cost }
+			multiply_temp_variable = { GLO_p_pp_cost_t = -1 }
+			multiply_temp_variable = { GLO_p_mp_cost_t = -1 }
+			multiply_temp_variable = { GLO_p_inf_cost_t = -1 }
+
+
+			add_political_power = GLO_p_pp_cost_t
+            add_manpower = GLO_p_mp_cost_t
             
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
-			    amount = global.GLO_p_inf_cost
+			    amount = GLO_p_inf_cost_t
 			}
 
 			hidden_effect = {
@@ -222,12 +230,20 @@ GLO_state_integration_category = {
 		}
 
         complete_effect = {
-			add_manpower = global.GLO_f_mp_cost
+			set_temp_variable = { GLO_f_mp_cost_t = global.GLO_f_mp_cost }
+			set_temp_variable = { GLO_f_inf_cost_t = global.GLO_f_inf_cost }
+
+			multiply_temp_variable = { GLO_f_mp_cost_t = -1 }
+			multiply_temp_variable = { GLO_f_inf_cost_t = -1 }
+
+			add_manpower = GLO_f_mp_cost_t
            
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
-			    amount = global.GLO_f_inf_cost
+			    amount = GLO_f_inf_cost_t
 			}
+
+			add_stability = global.GLO_f_stability_cost
 
 			hidden_effect = {
 				FROM = { 
@@ -246,10 +262,11 @@ GLO_state_integration_category = {
 					set_variable = { global.GLO_f_res_cost = 35 }
 					set_variable = { global.GLO_f_mp_cost = 8500 }
 					set_variable = { global.GLO_f_inf_cost = 1600 }
-					set_variable = { global.GLO_f_stability_cost = -0.02 }
+					set_variable = { global.GLO_f_stability_cost = -0.03 }
 				}
 			}
-            add_stability = global.GLO_f_stability_cost
+
+            
         }
 
         remove_effect = {
