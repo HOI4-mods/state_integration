@@ -35,8 +35,6 @@ GLO_state_integration_category = {
         on_map_mode = map_only
 
         state_target = any_controlled_state 
-
-        target_array = controlled_states
 		
 		ai_will_do = {
 			base = 0
@@ -58,27 +56,28 @@ GLO_state_integration_category = {
 					resistance < 26
 				}
 			}
-			if = {
+			else_if = {
 				limit = { has_global_flag = medium_difficulty }
 				FROM = {
 					compliance > 79
 					resistance < 21
 				}
 			}
-			if = {
+			else_if = {
 				limit = { has_global_flag = hard_difficulty }
 				FROM = {
 					compliance > 89
 					resistance < 11
 				}
 			}
-			if = {
+			else_if = {
 				limit = { has_global_flag = very_hard_difficulty }
 				FROM = {
 					compliance > 94
 					resistance < 6
 				}
 			}
+
             has_manpower > global.GLO_p_mp_cost
             has_equipment = {
                 infantry_equipment > global.GLO_p_inf_cost
@@ -153,8 +152,6 @@ GLO_state_integration_category = {
         on_map_mode = map_only
 
         state_target = any_controlled_state 
-
-        target_array = controlled_states
 		
 		ai_will_do = {
 			base = 0
@@ -182,21 +179,21 @@ GLO_state_integration_category = {
 					resistance < 41
 				}
 			}
-			if = {
+			else_if = {
 				limit = { has_global_flag = medium_difficulty }
 				FROM = {
 					compliance > 34
 					resistance < 36
 				}
 			}
-			if = {
+			else_if = {
 				limit = { has_global_flag = hard_difficulty }
 				FROM = {
 					compliance > 39
 					resistance < 31
 				}
 			}
-			if = {
+			else_if = {
 				limit = { has_global_flag = very_hard_difficulty }
 				FROM = {
 					compliance > 44
@@ -226,7 +223,7 @@ GLO_state_integration_category = {
         days_remove = 75
 
 		modifier = {
-			weekly_manpower = -150
+			weekly_manpower = -500
 		}
 
         complete_effect = {
