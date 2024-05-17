@@ -92,6 +92,7 @@ country_event = {
 			set_variable = { global.GLO_p_res_cost = 5 }
 			set_variable = { global.GLO_p_mp_cost = 1500 }
 			set_variable = { global.GLO_p_inf_cost = 750 }
+			
 			set_variable = { global.GLO_f_comp_cost = 45 }
 			set_variable = { global.GLO_f_res_cost = 25 }
 			set_variable = { global.GLO_f_mp_cost = 20000 }
