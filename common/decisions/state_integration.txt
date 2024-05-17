@@ -49,48 +49,23 @@ GLO_state_integration_category = {
         }
 
         available = {
-			if = {
-				limit = { has_global_flag = easy_difficulty }
-				FROM = {
-					compliance > 69
-					resistance < 26
-				}
-			}
-			else_if = {
-				limit = { has_global_flag = medium_difficulty }
-				FROM = {
-					compliance > 79
-					resistance < 21
-				}
-			}
-			else_if = {
-				limit = { has_global_flag = hard_difficulty }
-				FROM = {
-					compliance > 89
-					resistance < 11
-				}
-			}
-			else_if = {
-				limit = { has_global_flag = very_hard_difficulty }
-				FROM = {
-					compliance > 94
-					resistance < 6
-				}
+			FROM = {
+				compliance > global.GLO_p_comp_cost
 			}
 
             has_manpower > global.GLO_p_mp_cost
             has_equipment = {
                 infantry_equipment > global.GLO_p_inf_cost
             }
-        }
 
-        visible = {
 			FROM = {
 				NOT = {
 					has_state_flag = being_cored
 				}
 			}
         }
+
+        visible = {}
 
         custom_cost_trigger = {
             has_political_power > global.GLO_p_pp_cost
@@ -172,47 +147,23 @@ GLO_state_integration_category = {
         }
 
         available = {
-            if = {
-				limit = { has_global_flag = easy_difficulty }
-				FROM = {
-					compliance > 29
-					resistance < 41
-				}
+			FROM = {
+				compliance > global.GLO_f_comp_cost
 			}
-			else_if = {
-				limit = { has_global_flag = medium_difficulty }
-				FROM = {
-					compliance > 34
-					resistance < 36
-				}
-			}
-			else_if = {
-				limit = { has_global_flag = hard_difficulty }
-				FROM = {
-					compliance > 39
-					resistance < 31
-				}
-			}
-			else_if = {
-				limit = { has_global_flag = very_hard_difficulty }
-				FROM = {
-					compliance > 44
-					resistance < 26
-				}
-			}
+
             has_manpower > global.GLO_f_mp_cost
             has_equipment = {
                 infantry_equipment > global.GLO_f_inf_cost
             }
-        }
 
-        visible = {
-            FROM = {
+			FROM = {
 				NOT = {
 					has_state_flag = being_cored
 				}
 			}
         }
+
+        visible = {}
 
         custom_cost_trigger = {
             has_manpower > global.GLO_f_mp_cost
